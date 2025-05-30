@@ -1,0 +1,60 @@
+The output of: pwd : is
+>>>>>>>>>>>>>>>
+/home/mo/programmingProjects/eecs3221/ass1/A01_files
+<<<<<<<<<<<<<<<
+The output of: ls -l -a -F : is
+>>>>>>>>>>>>>>>
+total 228
+drwxrwxrwx 3 mo mo   4096 May 22 19:05 ./
+drwxr-xr-x 3 mo mo   4096 May 12 18:35 ../
+-rwxr-xr-x 1 mo mo  22248 May 22 14:52 a.out*
+-rwxr-xr-x 1 mo mo  22288 May 22 18:25 Assignment_1*
+-rw-r--r-- 1 mo mo 111135 May 15 09:15 EECS3221SU25--A01.pdf
+-rw-rw-rw- 1 mo mo    516 Sep 25  2022 how_to_run.txt
+-rwxr-xr-x 1 mo mo  16768 May 22 14:22 main*
+-rw-r--r-- 1 mo mo   5300 May 22 18:25 main.c
+-rw-r--r-- 1 mo mo    650 May 15 10:16 mainworks
+-rw-rw-rw- 1 mo mo    153 Sep 30  2020 makefile
+-rw-rw-rw- 1 mo mo    157 Sep 21  2020 output function.txt
+-rw-r--r-- 1 mo mo      0 May 22 19:05 out.txt
+-rw-rw-rw- 1 mo mo     49 May 22 18:30 sample_in.txt
+-rw-rw-rw- 1 mo mo   1108 Sep 30  2020 sample_out.txt
+-rw-r--r-- 1 mo mo   2132 May 20 15:34 testGFW
+drwxr-xr-x 2 mo mo   4096 May 15 09:16 .vscode/
+<<<<<<<<<<<<<<<
+The output of: ps : is
+>>>>>>>>>>>>>>>
+    PID TTY          TIME CMD
+   2573 pts/1    00:00:00 bash
+   2634 pts/1    00:00:00 Assignment_1
+   2637 pts/1    00:00:00 ps
+<<<<<<<<<<<<<<<
+The output of: pwd -L -P : is
+>>>>>>>>>>>>>>>
+/home/mo/programmingProjects/eecs3221/ass1/A01_files
+<<<<<<<<<<<<<<<
+The output of: ls : is
+>>>>>>>>>>>>>>>
+a.out
+Assignment_1
+EECS3221SU25--A01.pdf
+how_to_run.txt
+main
+main.c
+mainworks
+makefile
+output function.txt
+out.txt
+sample_in.txt
+sample_out.txt
+testGFW
+<<<<<<<<<<<<<<<
+The output of: cat makefile : is
+>>>>>>>>>>>>>>>
+# Do not edit the contents of this file.
+warnings_BAD: *.c
+	gcc -Werror -Wall -g -std=gnu99 -o Assignment_1 *.c -lrt
+	
+clean: *.c
+	rm Assignment_1
+<<<<<<<<<<<<<<<

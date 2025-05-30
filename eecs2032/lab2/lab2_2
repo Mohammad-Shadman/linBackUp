@@ -1,0 +1,11 @@
+a)  find -type f -name ".*"
+
+b)  find -type f -name "*notes?.txt"
+
+    cat $(find -type f -name "*notes?.txt")
+
+c)  mv hello\$world.txt greetings.txt
+
+d)  find -name "project?"
+
+e)  find ~ -type f -name "*.sh" >> scripts_list.txt

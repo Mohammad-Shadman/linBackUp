@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
+
+void writeOutput(char* command, char* output)
+{
+	printf("The output of: %s : is\n", command);
+	printf(">>>>>>>>>>>>>>>\n%s<<<<<<<<<<<<<<<\n", output);	
+}
+
+char* runCommand(){
+    char* c = NULL;
+    return c;
+}
+
+int main(){
+
+    pid_t mainPid = getpid();
+    
+    int pipefd[2];
+    pipe(pipefd);
+    pid_t p = fork();
+    if (p < 0){
+        return -1;
+    }
+    if (getpid() == mainPid){
+        printf("from main\n");
+    }
+    printf("%d %d %d\n",mainPid, p,getpid());
+    if(0 == p){
+        printf("from fork\n");
+    }
+    printf("hello World\n");
+    return 0;
+}

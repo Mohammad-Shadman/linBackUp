@@ -1,0 +1,104 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+#include <unistd.h>
+
+
+char** getArgs2(char* s){
+    int slen = strlen(s);
+    char** args = (char**)malloc(slen*sizeof(char*) );
+    int i = 0;
+    char* tokens = strtok(s, " \"");
+    while(tokens != NULL && i < slen){
+        args[i++] = tokens;
+        tokens = strtok(NULL," \"");
+
+    }
+    args[i] = NULL;
+    return args;
+
+}
+
+char* getArgs(char* str){
+    int i = 0;
+    int starterIndex;
+    int size = 0;
+    while(str[i] != ' ' && str[i] != '\0'&& str[i] != '\n' && str[i] != '\r'){
+        i++;
+    }
+    if (str[i] == '\0'|| str[i] == '\n'|| str[i] == '\r'){
+        return NULL;
+    }
+    i++;
+    starterIndex = i;
+    while(str[i] != '\0' && str[i] != '\n' && str[i] != '\r'){
+        size++;
+        i++;
+    }
+    char* args = (char*) malloc(size);
+    for (i = starterIndex; i < strlen(str); i++) {
+        args[i-starterIndex] = str[i];
+    }
+    return args;
+
+    
+}
+
+char* getCommand (char* str){
+    char strbase[] = "/bin/";
+    int i = 0, size = 0;
+    while(str[i] != '\0' && str[i] != ' ' && str[i] != '\r' && str[i] != '\n'){
+        size ++;
+         i++;
+    }
+    char* str2 = (char*)malloc(size-1);
+    for (i = 0; i < size; i++) {
+        str2[i] = str[i];
+       
+    }
+    char* str4 = (char*)malloc(5+strlen(str2));
+    for (int i = 0;i < 5; i++) {
+        str4[i] = strbase[i];
+    }
+
+    for (int i = 5; i < 5+strlen(str2); i++) {
+        str4[i] = str2[i-5];
+    }
+    free(str2);
+    return str4;
+}
+
+int main(){
+    char str[] = "ls -l -a -F\r";
+    
+    char** strNew = getArgs2(str);
+    
+    
+    int pipeOutfd[2];
+    pipe(pipeOutfd);
+    char* foo [4000];
+    
+    int p = fork();
+    
+    
+    
+    if (p ==0){
+        dup2 (pipeOutfd[1], STDOUT_FILENO);
+        close(pipeOutfd[0]);
+        close(pipeOutfd[1]);
+        execvp(strNew[0], strNew);
+        exit(0);
+    }
+    if(p > 0){
+        
+        wait(NULL);
+        close(pipeOutfd[1]);
+        int nbytes = read(pipeOutfd[0], foo, sizeof(foo));
+        printf("Output: (%.*s)\n", nbytes, foo);
+        
+    }
+    return 0;
+
+}

@@ -1,0 +1,54 @@
+/home/mo/programmingProjects/eecs2032/lab2_1.sh
+/home/mo/.config/waybar/pinkhypr/setup.sh
+/home/mo/.config/waybar/scripts/playerctl/playerctl.sh
+/home/mo/.config/waybar/scripts/wlrecord.sh
+/home/mo/.config/Code - OSS/User/History/12a44efd/ARJW.sh
+/home/mo/.config/Code - OSS/User/History/12a44efd/IYWC.sh
+/home/mo/.config/Code - OSS/User/History/12a44efd/0ekz.sh
+/home/mo/.config/Code - OSS/User/History/12a44efd/HHa2.sh
+/home/mo/.config/Code - OSS/User/History/12a44efd/UrdA.sh
+/home/mo/.config/Code - OSS/User/History/12a44efd/AX86.sh
+/home/mo/.config/Code - OSS/User/History/12a44efd/5dA0.sh
+/home/mo/.config/Code - OSS/User/History/12a44efd/vNH1.sh
+/home/mo/.config/Code - OSS/User/History/12a44efd/K6AE.sh
+/home/mo/.config/Code - OSS/User/History/12a44efd/cGFq.sh
+/home/mo/.config/Code - OSS/User/History/12a44efd/KLLL.sh
+/home/mo/.config/Code - OSS/User/History/12a44efd/ijO6.sh
+/home/mo/.config/Code - OSS/User/History/12a44efd/EsZx.sh
+/home/mo/.config/Code - OSS/User/History/12a44efd/P6S2.sh
+/home/mo/.config/Code - OSS/User/History/12a44efd/Lc7X.sh
+/home/mo/.config/Code - OSS/User/History/12a44efd/k0kf.sh
+/home/mo/.config/Code - OSS/User/History/12a44efd/J8FS.sh
+/home/mo/.config/Code - OSS/User/History/12a44efd/tv8r.sh
+/home/mo/.config/Code - OSS/User/History/12a44efd/lh1H.sh
+/home/mo/.config/Code - OSS/User/History/12a44efd/kikg.sh
+/home/mo/.config/Code - OSS/User/History/12a44efd/lG0K.sh
+/home/mo/.config/Code - OSS/User/History/12a44efd/sR0m.sh
+/home/mo/.config/Code - OSS/User/History/12a44efd/tBDr.sh
+/home/mo/.config/Code - OSS/User/History/12a44efd/pqfc.sh
+/home/mo/.config/Code - OSS/User/History/12a44efd/Xu7v.sh
+/home/mo/.config/Code - OSS/User/History/12a44efd/bcHw.sh
+/home/mo/.config/Code - OSS/User/History/12a44efd/ussw.sh
+/home/mo/.config/Code - OSS/User/History/12a44efd/CH6w.sh
+/home/mo/.config/Code - OSS/User/History/12a44efd/aD21.sh
+/home/mo/yay/src/gopath/pkg/mod/golang.org/x/sys@v0.31.0/plan9/mkerrors.sh
+/home/mo/yay/src/gopath/pkg/mod/golang.org/x/sys@v0.31.0/plan9/mkall.sh
+/home/mo/yay/src/gopath/pkg/mod/golang.org/x/sys@v0.31.0/plan9/mksysnum_plan9.sh
+/home/mo/yay/src/gopath/pkg/mod/golang.org/x/sys@v0.31.0/unix/mkerrors.sh
+/home/mo/yay/src/gopath/pkg/mod/golang.org/x/sys@v0.31.0/unix/mkall.sh
+/home/mo/yay/src/gopath/pkg/mod/golang.org/x/net@v0.38.0/internal/quic/cmd/interop/run_endpoint.sh
+/home/mo/yay/src/gopath/pkg/mod/github.com/ohler55/ojg@v1.26.1/gen-coverage-badge.sh
+/home/mo/yay/src/gopath/pkg/mod/github.com/ohler55/ojg@v1.26.1/cmd/oj/doc_gen.sh
+/home/mo/Hyprland/subprojects/udis86/scripts/asmtest.sh
+/home/mo/Hyprland/subprojects/udis86/autogen.sh
+/home/mo/Hyprland/subprojects/tracy/extra/make-build.sh
+/home/mo/Hyprland/subprojects/tracy/extra/update-meson-version.sh
+/home/mo/Hyprland/nix/update-inputs.sh
+/home/mo/Hyprland/scripts/generateShaderIncludes.sh
+/home/mo/Hyprland/scripts/generateVersion.sh
+/home/mo/Hyprland/build/_deps/glaze-src/util/run_clang-format.sh
+/home/mo/Hyprland/build/_deps/glaze-src/fuzzing/quickfuzz/run_all.sh
+/home/mo/Hyprland/build/_deps/glaze-src/fuzzing/quickfuzz/run_single.sh
+/home/mo/Hyprland/build/_deps/glaze-src/fuzzing/build_and_run_fuzzers.sh
+/home/mo/Hyprland/build/_deps/glaze-src/fuzzing/ossfuzz.sh
+/home/mo/Hyprland/build/_deps/glaze-src/fuzzing/minimize_and_cleanse.sh
