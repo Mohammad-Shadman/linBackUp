@@ -165,6 +165,7 @@ void runCommand(char* command){
     
     if (p ==0){
         dup2 (pipeOutfd[1], STDOUT_FILENO);
+        dup2 (pipeOutfd[1], STDERR_FILENO);
         close(pipeOutfd[0]);
         close(pipeOutfd[1]);
         execvp(strNew[0], strNew);

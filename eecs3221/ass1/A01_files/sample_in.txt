@@ -3,4 +3,4 @@ ls -l -a -F
 ps
 pwd -L -P
 ls
-cat makefile
+cat makefiLe
