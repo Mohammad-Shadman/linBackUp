@@ -24,6 +24,11 @@ void LLinitList(QueuePTR list,char* data){
     list->tail = list->head;
     list->size = 1;
 }
+void LLsimpleInitList(QueuePTR list){
+    list->head = NULL;
+    list->tail = list->head;
+    list->size = 0;
+}
 
 void LLappendHead(QueuePTR list, char* data){
     if (list->head == NULL){
@@ -208,6 +213,7 @@ int main(int argc, char** argv){
 
     Queue list;
 
+    LLsimpleInitList(&list);
     parser(&list,filePTR);
 
     NodePTR curr = list.head;
