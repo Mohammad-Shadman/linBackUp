@@ -1,6 +1,8 @@
 # Do not edit the contents of this file.
+# 
+# g++ *.cpp -lglfw -lGL  -lXrandr -lXi -lXxf86vm -lpthread -ldl -lm -o openGLTest
 warnings_BAD: *.cpp
-	g++ -Werror -Wall -g -oOpenGLTest *.cpp -lGL -lGLU -lglfw
+	g++ glad.c -Wall -g -oOpenGLTest *.cpp -ldl -lGL -lm -lglfw	
 	
 clean: *.c
-	rm OpenGLTest 
+	rm openGLTest 

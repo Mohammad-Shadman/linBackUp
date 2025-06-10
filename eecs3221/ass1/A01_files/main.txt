@@ -6,6 +6,13 @@
 #include <unistd.h>
 
 
+//ask proff:
+//does a ptr store a relative address or an absolute address
+union {
+    int i;
+    char msg[4];
+}converter;
+
 typedef struct Node {
     char* data;
     struct Node* next;
@@ -85,7 +92,6 @@ void LLfreeAll(QueuePTR list){
         toBeRemoved = curr;
         curr = curr->next;
         list->size --;
-        //free(toBeRemoved->data);
         free(toBeRemoved);
         
     }
@@ -109,7 +115,7 @@ void parser(QueuePTR list, FILE* filePTR){
        
         }
         LLappendToTail(list,str2);
-        //buffer = (char*)malloc(buffSize);
+        buffer = (char*)malloc(buffSize);
         memset(buffer, '\0' ,buffSize);
         
     }
@@ -130,10 +136,10 @@ char** getArgs2(char* s){
     char* scopy = strdup(s);
     char** args = (char**)malloc(slen*sizeof(char*));
     int i = 0;
-    char* tokens = strtok(scopy, " ");
+    char* tokens = strtok(scopy, " \"");
     while(tokens != NULL && i < slen){
         args[i++] = tokens;
-        tokens = strtok(NULL," ");
+        tokens = strtok(NULL," \"");
 
     }
     args[i] = NULL;
@@ -194,22 +200,47 @@ void runCommand(char* command){
 int main(int argc, char** argv){
 
     if (argc != 2){
-        perror("needs 1 argument (text document)");
-        exit(-1);
+        perror("needs argument (text document)");
+        exit(1);
         return -1;
     }
     FILE* filePTR = fopen(argv[1],"r");
     
     if (filePTR == NULL) {
         perror("Error opening file");
-        exit(-1);
+        exit(1);
         return -1;
     }
 
     Queue list;
 
     parser(&list,filePTR);
-
+ /*   
+    pid_t mainPid = getpid();
+    
+    int pipeMainToChildrenfd[2];
+    int pipeChildrenToMainfd[2];
+ 
+    //pipe(pipeMainToChildrenfd);
+    //pipe(pipeChildrenToMainfd);
+    //pid_t p = fork();
+    if (p < 0){
+        return -1;
+    }
+    if (getpid() == mainPid){
+        printf("\nfrom main\n");
+        close(pipeMainToChildrenfd[0]);
+        converter.i = p;
+        write(pipeMainToChildrenfd[1],converter.msg , 4) ;
+        printf("%d\n" ,p);
+    }    
+    else{
+        close(pipeMainToChildrenfd[1]);
+        read(pipeMainToChildrenfd[0],converter.msg,4);
+        p = converter.i;
+        printf("p = %d getid = %d\n",p,getpid());
+    }
+*/
     NodePTR curr = list.head;
     while (curr != NULL){
         runCommand(curr->data);

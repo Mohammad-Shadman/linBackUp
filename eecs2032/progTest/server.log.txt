@@ -1,0 +1,5 @@
+[12:34:56] info   Server started successfully
+[14:20:10] error  Connection failed
+[16:45:30] warn    Low disk space
+[18:55:12] info  User logged in
+[21:30:50] WARN    System check passed [22:45:55]

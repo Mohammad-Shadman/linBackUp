@@ -1,0 +1,5 @@
+[12:34:56] 2024-07-04 Process1 Started successfully
+2024/07/05 [14:20:10] Process2 FAILED
+[16:45:30] 2024-07-06 Process3 stopped unexpectedly
+2024-07-07 Process4 RuNninG normally [21:30:50]
+ 
